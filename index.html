@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn with Tellavista – AI University for Every LASU Course</title>
+  <meta name="description" content="Learn with Tellavista — the smartest AI tutor for all LASU courses. From engineering to medicine, law to computer science, Tellavista explains every topic using AI." />
+  <meta name="keywords" content="Learn with Tellavista, LASU courses, AI University, AI tutor, AI learning platform, artificial intelligence education, online learning, study with AI, university subjects, medicine, engineering, law, business, mathematics, social sciences, education, arts, science, LASU, African EdTech" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Learn with Tellavista – The AI University for Every LASU Course" />
+  <meta property="og:description" content="Study smarter with AI — all Lagos State University courses taught by the world’s most advanced AI tutor." />
+  <meta property="og:image" content="https://tellavista-ai.github.io/logo.png" />
+  <meta property="og:url" content="https://learn-with-tellavista.github.io/" />
+
+  <link rel="icon" href="https://tellavista-ai.github.io/favicon.png" />
+
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {font-family:'Poppins', sans-serif; background:#f4f6fb; color:#1a1a1a; padding:20px;}
+    header {text-align:center; margin-bottom:20px;}
+    h1 {color:#0078ff; font-size:2em; margin-bottom:10px;}
+    h2 {font-size:1.5em; margin-top:20px; margin-bottom:10px; color:#333;}
+    p {max-width:800px; margin:0 auto 15px auto; font-size:1em; line-height:1.6; color:#333; padding:0 10px;}
+    section ul {list-style:none; padding-left:20px; margin-bottom:20px;}
+    section li {margin-bottom:5px; font-size:1em;}
+    .btn {display:inline-block; background:#0078ff; color:white; text-decoration:none; padding:12px 30px; border-radius:10px; font-weight:600; margin-top:20px;}
+    .btn:hover {background:#005fcc;}
+    footer {margin-top:40px; font-size:0.9em; color:#666; padding:10px 0; text-align:center;}
+
+    @media (max-width:768px){
+      h1 {font-size:1.6em;}
+      h2 {font-size:1.2em;}
+      p {font-size:0.95em;}
+      li {font-size:0.95em;}
+      .btn {padding:10px 25px; font-size:0.9em;}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Learn with Tellavista</h1>
+    <p>The AI University for Every LASU Course</p>
+  </header>
+
+  <p>Welcome to <strong>Learn with Tellavista</strong> — the smartest AI tutor for all Lagos State University courses.  
+     From engineering to medicine, law to computer science, arts, social sciences, and beyond, Tellavista guides you through every subject with interactive AI-powered lessons and explanations.</p>
+
+  <section id="course-grid"></section>
+
+  <a class="btn" href="https://tella-vista.github.io">Start Learning Now</a>
+
+  <footer>
+    <p>© 2025 Tellavista – Redefining University Learning with AI.</p>
+  </footer>
+
+  <script>
+    const courses = {
+      "Faculty of Arts": ["Arabic Studies","Christian Religious Studies","English Language","French","History and International Studies","Linguistics","Philosophy","Theatre Arts"],
+      "Faculty of Education": ["Biology Education","Chemistry Education","Computer Science Education","Educational Management","English Education","Geography Education","Health Education","Mathematics Education","Physics Education","Social Studies Education"],
+      "Faculty of Engineering": ["Aerospace Engineering","Chemical and Polymer Engineering","Civil Engineering","Computer Engineering","Electrical and Electronics Engineering","Mechanical Engineering"],
+      "Faculty of Law": ["Common and Islamic Law"],
+      "Faculty of Management Sciences": ["Accounting","Banking and Finance","Business Administration","Insurance","Marketing","Public Administration"],
+      "Faculty of Science": ["Biochemistry","Biology","Botany","Chemistry","Geology","Mathematics","Microbiology","Physics","Statistics","Zoology"],
+      "Faculty of Social Sciences": ["Economics","Geography","Political Science","Psychology","Sociology"],
+      "College of Medicine": ["Medicine and Surgery","Dentistry","Medical Laboratory Science","Nursing Science","Pharmacy","Physiotherapy"],
+      "School of Agriculture": ["Agricultural Economics and Farm Management","Agricultural Extension and Rural Development","Animal Science","Crop Production","Fisheries and Aquaculture","Soil Science"],
+      "School of Computing and IT": ["Computer Science","Information Technology"],
+      "School of Transport and Logistics": ["Transport Management","Logistics and Supply Chain Management"]
+    };
+
+    const courseGrid = document.getElementById('course-grid');
+    for(const [faculty, courseList] of Object.entries(courses)){
+      const sectionEl = document.createElement('section');
+      const facultyTitle = document.createElement('h2');
+      facultyTitle.textContent = faculty;
+      sectionEl.appendChild(facultyTitle);
+
+      const ul = document.createElement('ul');
+      courseList.forEach(course=>{
+        const li = document.createElement('li');
+        li.textContent = course;
+        ul.appendChild(li);
+      });
+      sectionEl.appendChild(ul);
+      courseGrid.appendChild(sectionEl);
+    }
+  </script>
+</body>
+</html>
