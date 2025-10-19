@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://learn-with-tellavista.github.io/sitemap.xml
+
+# Block any private or system folders (if any in future)
+Disallow: /private/
+Disallow: /admin/
