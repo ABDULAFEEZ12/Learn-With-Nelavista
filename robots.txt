@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://learn-with-tellavista.github.io/sitemap.xml
+Sitemap: https://abdulafeez12.github.io/nelavistaedu/sitemap.xml
 
 # Block any private or system folders (if any in future)
 Disallow: /private/
